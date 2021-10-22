@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head_content %}
+  <title>Citas</title>
+{% endblock %}
+
+{% block container %}
+	<center>
+        			<div class="form_register" style="width: 450px; margin: auto;">
+           			 <h1 style="color: #3c93b0;" class="mt-5">Matriz Turno</h1>
+            			<hr style="background: #ccc; height: 1px; margin: 10px 0; display: block;" class="mt-3">
+              
+                <form method="POST" style="background: #fff;margin: auto;padding: 20px 50px;border: 1px solid #d1d1d1;">
+                    {% csrf_token %}
+                    <div style="display: block; font-size: 12pt; font-family: 'GothamBook'; margin: 15px auto 5px auto";>
+                      <label for="interes">Seleccionar perfil</label>
+                    
+                      <select class="form-select" aria-label="Default select example" style="display: block;width: 100%;font-size: 11pt;padding: 5px;border: 1px solid #85929e;border-radius: 5px;" required>
+                        <option selected>Seleccione..</option>
+                        <option value="1">Especialista</option>
+                        <option value="2">Emfermero</option>
+                      </select>
+                      <br>
+                      
+                      <label for="interes">Fecha de inicio</label>
+                      <input type="date" name="fechaCita" id="interes" style="display: block;width: 100%;font-size: 11pt;padding: 5px;border: 1px solid #85929e;border-radius: 5px;" required>
+                      <label for="interes">Fecha de finalizacion</label>
+                      <input type="date" name="fechaCita" id="interes" style="display: block;width: 100%;font-size: 11pt;padding: 5px;border: 1px solid #85929e;border-radius: 5px;" required>
+                      <br>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Excel
+                        </label>
+                      </div>
+                      <br>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          PDF
+                        </label>
+                      </div>
+                      <br>
+                      <button type="button" class="btn btn-primary btn-lg">Exportar</button>
+            
+                </div>
+              </form>
+            </div>  
+			
+
+	</center></table>
+{% endblock%}

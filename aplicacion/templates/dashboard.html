@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+  {% load static %}
+  
+  {% block head_content %}
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  {% endblock %}
+  
+
+  {% block container %}
+  
+  <div class="container" style="position: absolute;right: 10px;top: 200px;">
+    <img src="{% static "img/logo.png" %}" alt="" width="370" height="350" class="d-inline-block align-text-top">
+    <br>
+    <br>
+    <p>
+      Nuestra aplicacion esta destinada al sector salud,<br>
+      para la planeacion y elaboracion de la matrix de<br>
+      turnos del personal que trabaje en la clinica <br>
+      (Especialistas, Emfermeros), permitiendo tener un<br>
+      control del personal con unos tiempos definidos<br>
+      por la empresa. 
+    </p>
+  </div>
+  
+  {% endblock %}
